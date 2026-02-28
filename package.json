@@ -1,0 +1,50 @@
+{
+  "name": "rslib-project",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "doc": "rspress dev",
+    "doc:build": "rspress build",
+    "doc:preview": "rspress preview",
+    "format": "biome format --write",
+    "test": "rstest",
+    "test:watch": "rstest --watch"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.14",
+    "@rsbuild/plugin-react": "^1.4.5",
+    "@rslib/core": "^0.19.6",
+    "@rspress/core": "^2.0.3",
+    "@rspress/plugin-api-docgen": "^2.0.3",
+    "@rspress/plugin-preview": "^2.0.3",
+    "@rstest/adapter-rslib": "^0.2.0",
+    "@rstest/core": "^0.8.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^24.10.13",
+    "@types/react": "^19.2.14",
+    "happy-dom": "^20.6.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rsbuild-plugin-workspace-dev": "^0.1.4",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "private": true
+}
